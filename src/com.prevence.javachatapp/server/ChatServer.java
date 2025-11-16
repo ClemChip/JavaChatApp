@@ -39,6 +39,7 @@ class ClientHandler implements Runnable {
         try {
             String inputLine;
             while ((inputLine = in.readLine()) != null){
+                System.out.println("[SERVEUR] Message reçu : " + inputLine);
                 //Diffuser des messages à tous les clients
                 for (ClientHandler aClient : clients) {
                     aClient.out.println(inputLine);
